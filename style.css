@@ -1,0 +1,98 @@
+body {
+    font-family: 'Playfair Display', serif; 
+    background: url('https://i.pinimg.com/736x/88/7f/0d/887f0d9a694564b2740ca8600bbb601c.jpg') center/100% auto no-repeat; 
+    color: white;
+    padding: 20px;
+    margin: 0;
+    height: 100vh; 
+    overflow: hidden; 
+}
+#ramen-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 2em; /* Title size */
+    font-weight: bold; /* Bold font */
+    font-family: sans-serif;
+    color: black; /* title text color to black */
+}
+
+#ramen-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the ramen images horizontally */
+    align-items: center; /* Center them vertically if there's enough space */
+    margin-top: 20px; /* Space above the ramen menu */
+}
+
+.ramen-image {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    margin: 40px; /* Space between images */
+    cursor: pointer; /* Pointer cursor for clickable images */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); 
+}
+
+#selected-ramen-container {
+    margin-top: 20px; /* Space above the selected ramen details */
+    padding: 15px; /* Padding around the container */
+    border-radius: 10px; /* Match the rounded corners of the ramen images */
+    text-align: center; /* Center text and content */
+}
+
+#selected-ramen-image {
+    width: 100px; /* Match the width of the ramen images */
+    height: 100px; /* Match the height of the ramen images */
+    border-radius: 40px; /* Match the rounded corners */
+    margin-bottom: 10px; 
+}
+
+form {
+    margin-top: 20px; /* Space above the form */
+    padding: 15px; /* Padding around the form */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for form */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+h2, p {
+    margin: 0; /* Remove default margin for headings and paragraphs */
+}
+
+div {
+    margin-bottom: 10px; /* Space between form fields */
+}
+
+label {
+    display: block; /* Make label a block element */
+    margin-bottom: 5px; /* Space between label and input */
+    color: white; /* Label color */
+}
+
+input[type="text"],
+input[type="url"],
+input[type="number"],
+textarea {
+    width: 10%; /* Full width inputs */
+    padding: 2px; /* Padding for inputs */
+    border-radius: 1px; /* Rounded corners for inputs */
+    border: thick; /* Remove borders */
+    
+}
+ column-area{
+    width: 12%;
+    padding: 1px;
+}
+
+button {
+    padding: 8px 10px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Rounded corners for button */
+    background-color: #f39c12; /* Button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #e67e22; /* Darken button color on hover */
+}
