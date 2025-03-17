@@ -4,42 +4,52 @@ const ramens = [
     { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "https://i.pinimg.com/236x/db/07/2d/db072d20bc9a2de134c1a39b52f320a3.jpg", rating: null, comment: null }
 ];
 
-// Function to display ramen images
+// Function to display ramen images with names
 function displayRamens() {
     const ramenMenu = document.getElementById('ramen-menu');
     ramenMenu.innerHTML = ''; // Clear existing images
     
     ramens.forEach(ramen => {
+        const ramenContainer = document.createElement('div');
+        ramenContainer.classList.add('ramen-container');
+        
         const img = document.createElement('img');
         img.src = ramen.image;
         img.alt = ramen.name;
         img.classList.add('ramen-image');
         img.addEventListener('click', () => handleClick(ramen));
-        ramenMenu.appendChild(img);
+
+        const ramenName = document.createElement('p');
+        ramenName.textContent = ramen.name;
+        ramenName.classList.add('ramen-name');
+        
+        ramenContainer.appendChild(img);
+        ramenContainer.appendChild(ramenName);
+        
+        ramenMenu.appendChild(ramenContainer);
     });
 }
 
 // Function to handle ramen image click
 function handleClick(ramen) {
     document.getElementById('ramen-name').textContent = ramen.name;
+    document.getElementById('ramen-restaurant').textContent = `Restaurant: ${ramen.restaurant}`;
 
     const selectedRamenImage = document.getElementById('selected-ramen-image');
-    selectedRamenImage.src = ramen.image; // Set the click image to show below
+    selectedRamenImage.src = ramen.image;
     selectedRamenImage.alt = ramen.name;
 
-    document.getElementById('ramen-restaurant').textContent = `Restaurant: ${ramen.restaurant}`;
     document.getElementById('rating-value').textContent = ramen.rating !== null ? ramen.rating : 'N/A';
     document.getElementById('comment-value').textContent = ramen.comment !== null ? ramen.comment : 'N/A';
 
-    document.getElementById('selected-ramen-container').style.display = 'block'; // Show selected ramen details
-    document.getElementById('delete-ramen').onclick = () => deleteRamen(ramen.id);
+    document.getElementById('selected-ramen-container').style.display = 'block';
 }
 
 // Function to handle new ramen form submission
 function addSubmitListener() {
     const form = document.getElementById('new-ramen-form');
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent the form from submitting normally
+        event.preventDefault();
         
         const newRamen = {
             id: ramens.length + 1,
@@ -50,22 +60,11 @@ function addSubmitListener() {
             comment: document.getElementById('comment').value
         };
 
-        // Add the new ramen to the menu and display it
         ramens.push(newRamen);
-        displayRamens(); // Refresh the ramen images to include the new entry
-        form.reset(); // Reset form fields
-        handleClick(newRamen); // Show details for new ramen
-    });
-}
-
-// Function to delete ramen
-function deleteRamen(id) {
-    const indexToDelete = ramens.findIndex(ramen => ramen.id === id);
-    if (indexToDelete !== -1) {
-        ramens.splice(indexToDelete, 1);
         displayRamens();
-        document.getElementById('selected-ramen-container').style.display = 'none'; // Hide details after deletion
-    }
+        form.reset();
+        handleClick(newRamen);
+    });
 }
 
 // Main function to initialize the app
