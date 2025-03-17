@@ -11,7 +11,7 @@ body {
 #ramen-title-container {
     background-color: black;
     width: 100%;
-    padding: 15px;
+    padding: 13px;
     text-align: center;
      margin-top: 0;
      position:absolute;
@@ -21,9 +21,9 @@ body {
 
 #ramen-title {
     color: white;
-    font-size: 2.5em;
+    font-size: 1.7em;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: Arial;
 }
 
 /* Ramen menu styling */
@@ -36,10 +36,10 @@ body {
 }
 
 .ramen-image {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    margin: 50px;
+    margin: 20px;
     cursor: pointer;
     border-radius: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -47,8 +47,8 @@ body {
 
 /* Selected ramen details container */
 #selected-ramen-container {
-    margin-top: 10px;
-    padding: 3px;
+    margin-top: 5px;
+    padding: 2px;
     border-radius: none;
     text-align: center;
 }
@@ -61,8 +61,8 @@ body {
 }
 
 #selected-ramen-image {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     border-radius: none;
     object-fit: cover;
     margin-bottom: 10px;
@@ -87,13 +87,13 @@ body {
 }
 
 #ramen-name {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0;
 }
 
 #ramen-restaurant {
     font-size: 1em;
-    margin: 5px 0;
+    margin: 4px 0;
 }
 
 /* Styling for the Rating and Comment sections */
@@ -179,7 +179,7 @@ button {
 
 button:hover {
     background-color: black;
-    width: 40%;
+    
     
 }
 
