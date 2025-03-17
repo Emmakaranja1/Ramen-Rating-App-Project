@@ -44,47 +44,27 @@ body {
     border-radius: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
-
-/* Selected ramen details container */
+/* Remove selected ramen container */
 #selected-ramen-container {
-    margin-top: 5px;
-    padding: 2px;
-    border-radius: none;
-    text-align: center;
+    display: none; /* Hide the container */
 }
 
-.selected-ramen-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
+/* Keep selected ramen image only */
 #selected-ramen-image {
-    width: 150px;
+    width: 150px; /* Set image size */
     height: 150px;
-    border-radius: none;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-top: 20px; /* Adjust space between the ramen menu and the selected image */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto;
+    display: block; /* Make sure it's a block element for centering */
 }
 
+/* Remove selected ramen text */
 #selected-ramen-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: clear;
-    color: black;
-    text-align: center;
-    padding: 6px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
+    display: none; /* Hide text */
 }
+
 
 #ramen-name {
     font-size: 1em;
@@ -157,7 +137,10 @@ button {
     background-color: black;
     color: white;
     cursor: pointer;
-    width: 15%;
+    width: 14%;
+    display: block;
+    margin: 20px auto;
+    font-size: 1em;
 }
 
 #new-ramen-form button {
@@ -167,14 +150,14 @@ button {
     background-color: black;
     color: white;
     cursor: pointer;
-    width: 30%; /* Make button span the full width of the form */
+    width: 45%; /* Make button span the full width of the form */
     font-size: 1em; /* Ensure the button text is consistent */
     
 }
 
 #new-ramen-form button:hover {
     background-color: #333;
-    width: 15%;
+
 }
 
 button:hover {
