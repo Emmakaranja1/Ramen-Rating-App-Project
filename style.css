@@ -36,10 +36,11 @@ body {
 }
 
 .ramen-image {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    margin: 20px;
+    margin-left: 5px;
+    margin-top: 30px;
     cursor: pointer;
     border-radius: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -51,10 +52,10 @@ body {
 
 /* Keep selected ramen image only */
 #selected-ramen-image {
-    width: 150px; /* Set image size */
-    height: 150px;
+    width: 500px; /* Set image size */
+    height: 500px;
     object-fit: cover;
-    margin-top: 20px; /* Adjust space between the ramen menu and the selected image */
+    margin-top: 1px; /* Adjust space between the ramen menu and the selected image */
     margin-left: auto; /* Center the image horizontally */
     margin-right: auto;
     display: block; /* Make sure it's a block element for centering */
@@ -85,12 +86,12 @@ body {
     border-radius: 5px; /* Rounded corners */
     text-align: center;
     width: 80%; /* Adjust width of the text container */
-    top: 20%; /* Positioning for ramen name */
+    top: 60%; /* Positioning for ramen name */
     margin-bottom: 10px;
 }
 #ramen-restaurant-container {
     position: absolute;
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
     color: black;
