@@ -33,7 +33,7 @@ function displayRamens() {
 // Function to handle ramen image click
 function handleClick(ramen) {
     document.getElementById('ramen-name').textContent = ramen.name;
-    document.getElementById('ramen-restaurant').textContent = `Restaurant: ${ramen.restaurant}`;
+    document.getElementById('ramen-restaurant').textContent = ramen.restaurant;
 
     const selectedRamenImage = document.getElementById('selected-ramen-image');
     selectedRamenImage.src = ramen.image;
@@ -64,14 +64,23 @@ function addSubmitListener() {
         displayRamens();
         form.reset();
         handleClick(newRamen);
+        document.getElementById('new-ramen-form').style.display = 'none';  // Hide the form after submission
     });
+}
+
+// Function to toggle the form visibility
+function toggleForm() {
+    const form = document.getElementById('new-ramen-form');
+    form.style.display = form.style.display === 'none' || form.style.display === '' ? 'block' : 'none';
 }
 
 // Main function to initialize the app
 function main() {
     displayRamens();
     addSubmitListener();
+    document.getElementById('Add-Ramen-ramen').addEventListener('click', toggleForm); // Toggle form visibility on button click
 }
 
 // Wait for the DOM content to be fully loaded before initializing
 document.addEventListener('DOMContentLoaded', main);
+

@@ -62,8 +62,45 @@ body {
 
 /* Remove selected ramen text */
 #selected-ramen-text {
-    display: none; /* Hide text */
+    position: absolute;
+    top: 36%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px; 
 }
+
+/* Text containers for ramen name and restaurant */
+#ramen-name-container{
+      position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
+    color: black;
+    padding: 5px 10px; /* Padding inside the text box */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    width: 80%; /* Adjust width of the text container */
+    top: 20%; /* Positioning for ramen name */
+    margin-bottom: 10px;
+}
+#ramen-restaurant-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
+    color: black;
+    padding: 5px 10px; /* Padding inside the text boxes */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    width: 80%; /* Adjust width of the text container */
+}
+
+
 
 
 #ramen-name {
