@@ -1,11 +1,9 @@
-/* Body and general layout */
 body {
     font-family: 'Playfair Display', serif;
     color: white;
     padding: 20px;
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
+    
 }
 
 #ramen-title-container {
@@ -45,23 +43,19 @@ body {
     border-radius: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
-/* Remove selected ramen container */
-#selected-ramen-container {
-    display: none; /* Hide the container */
-}
 
-/* Keep selected ramen image only */
+
 #selected-ramen-image {
-    width: 150px; /* Set image size */
-    height: 150px;
+    width: 200px; /* Set image size */
+    height: 200px;
     object-fit: cover;
     margin-top: 1px; /* Adjust space between the ramen menu and the selected image */
     margin-left: auto; /* Center the image horizontally */
     margin-right: auto;
-    display: block; /* Make sure it's a block element for centering */
+    display: block; /
 }
 
-/* Remove selected ramen text */
+
 #selected-ramen-text {
     position: absolute;
     top: 36%;
@@ -91,14 +85,14 @@ body {
 }
 #ramen-restaurant-container {
     position: absolute;
-    left: 45%;
+    left: 35%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
     color: black;
-    padding: 5px 10px; /* Padding inside the text boxes */
-    border-radius: 5px; /* Rounded corners */
+    padding: 3px 8px; 
+    border-radius: 5px; 
     text-align: center;
-    width: 50%; /* Adjust width of the text container */
+    width: 40%; 
 }
 
 
@@ -118,7 +112,7 @@ body {
 #ramen-rating, #ramen-comment {
     color: black;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 3px;
     text-align: center;
 }
 
@@ -130,7 +124,7 @@ body {
 
 /* Form styling */
 form {
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 15px;
     background-color:white;
     border-radius: none;
